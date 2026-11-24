@@ -29,7 +29,8 @@ nav.main a:hover{color:#fff}
 .tool .row{display:flex;gap:12px;flex-wrap:wrap}
 .tool input{flex:1 1 240px;font-size:18px;padding:13px 14px;border:1px solid var(--line);border-radius:10px}
 .tool .mini{color:var(--muted);font-size:14px;margin-top:10px}
-#fmcsaResult{display:none;border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:16px;background:#f8fafc;font-size:15px}
+.tool{color:var(--ink)}
+#fmcsaResult{display:none;border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:16px;background:#f8fafc;font-size:15px;color:var(--ink)}
 #fmcsaResult h3{margin:0 0 8px;color:var(--navy);font-size:18px}
 section{padding:44px 0}
 section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
