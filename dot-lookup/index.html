@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOT Number Lookup — Check a Carrier's Authority &amp; Insurance Filing History | Fifty Bridges</title>
+<meta name="description" content="Free DOT number lookup: check a motor carrier's USDOT status, operating authority, company snapshot, and insurance filing history from public FMCSA SAFER and open-data records.">
+<link rel="canonical" href="https://50bridgesinsuranceservices.com/dot-lookup/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/assets/styles.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DOT Number Lookup — Carrier Authority &amp; Insurance Filing History">
+<meta property="og:description" content="Enter a US DOT number and see the carrier's public FMCSA record: authority status, snapshot, and insurance filing history.">
+<meta property="og:url" content="https://50bridgesinsuranceservices.com/dot-lookup/">
+<meta property="og:image" content="https://50bridgesinsuranceservices.com/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://50bridgesinsuranceservices.com/"},{"@type":"ListItem","position":2,"name":"DOT Number Lookup","item":"https://50bridgesinsuranceservices.com/dot-lookup/"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I find a carrier's DOT number?","acceptedAnswer":{"@type":"Answer","text":"The DOT number appears on the carrier's insurance filings, rate confirmations, and the side of the truck itself. If you know the company name instead, search the FMCSA SAFER system by company name to find the number first."}},
+{"@type":"Question","name":"What does 'authority status' mean in the result?","acceptedAnswer":{"@type":"Answer","text":"It shows whether the carrier's federal operating authority (for example, Motor Carrier of Property) is active. A carrier whose authority is not active is not legally authorized to haul freight under that authority."}},
+{"@type":"Question","name":"Why does the insurance history only show cancelled or replaced filings?","acceptedAnswer":{"@type":"Answer","text":"Because that is what FMCSA publishes as open data. The Insurance History dataset covers filings that were cancelled or replaced. The current active filing is public in FMCSA's Motus snapshot, under Insurance Details with 'Include History' on — every result here links to it."}},
+{"@type":"Question","name":"How current is the data?","acceptedAnswer":{"@type":"Answer","text":"The lookup fetches FMCSA records live and shows the record's as-of date. FMCSA data itself updates on the agency's schedule, so a very recent change — a filing made today, for example — may not appear yet."}}
+]}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">Fifty Bridges <span>Insurance Services</span></a>
+    <nav class="main">
+      <a href="/dot-lookup/">DOT Lookup</a>
+      <a href="https://www.50bridges.com/" rel="noopener">Main Website</a>
+      <a class="btn btn-gold" href="https://www.50bridges.com/request-a-quote/">Request a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap"><p class="crumbs"><a href="/">Home</a> › DOT Number Lookup</p></div>
+
+<section style="padding-top:22px">
+  <div class="wrap">
+    <h1 style="color:var(--navy);font-size:34px;margin:0 0 12px">DOT number lookup</h1>
+    <p style="max-width:760px;font-size:18px">Check a motor carrier's public record before you load them, lease on, or renew: USDOT and authority status, the FMCSA company snapshot, and the carrier's insurance filing history. The lookup reads FMCSA's own public systems — nothing is estimated or filled in.</p>
+    <div class="card tool" style="margin-top:22px">
+      <label for="dot">US DOT number</label>
+      <div class="row">
+        <input id="dot" placeholder="e.g. 3475651" inputmode="numeric" maxlength="10" autocomplete="off">
+        <button class="btn btn-navy" type="button" id="lookupBtn">Look Up Carrier →</button>
+      </div>
+      <p class="mini" id="lookupMsg" aria-live="polite">Sources: FMCSA SAFER Company Snapshot and FMCSA open data (Company Census, Insurance History).</p>
+      <div id="fmcsaResult"></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>How to read the result</h2>
+    <div class="grid">
+      <div class="card"><h3>USDOT &amp; authority status</h3><p>Whether the carrier's registration and operating authority are active. An inactive authority means the carrier is not legally authorized to operate under it — a hard stop for brokers and shippers, and a red flag for everyone else.</p></div>
+      <div class="card"><h3>The snapshot</h3><p>Legal name, DBA, MC numbers, power units, drivers, cargo types, and operation classification, as the carrier reported them on its MCS-150. The MCS-150 date tells you how fresh that self-report is — carriers must update it every two years.</p></div>
+      <div class="card"><h3>Insurance filing history</h3><p>Cancelled and replaced filings: which insurer, which policy, what form and amount, and when it took effect and ended. Frequent changes or gaps can mean a carrier is struggling to keep coverage in force. The <b>current</b> filing is in FMCSA's Motus snapshot — the result links you there.</p></div>
+    </div>
+    <p style="max-width:760px;margin-top:22px">Checking your <b>own</b> record? If anything looks wrong — an old address, a wrong power-unit count, a filing you don't recognize — it is worth fixing before a broker or insurer sees it. And if the record raises questions about your current coverage, our main site walks through <a href="https://www.50bridges.com/how-to-get-a-truck-insurance-quote/">how to get a truck insurance quote</a> and what underwriters look at. Common questions are answered on the <a href="https://www.50bridges.com/faq/">Fifty Bridges FAQ page</a>.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap faq">
+    <h2>Questions</h2>
+    <details><summary>How do I find a carrier's DOT number?</summary><p>The DOT number appears on the carrier's insurance filings, rate confirmations, and the side of the truck itself. If you know the company name instead, search the FMCSA SAFER system by company name to find the number first.</p></details>
+    <details><summary>What does "authority status" mean in the result?</summary><p>It shows whether the carrier's federal operating authority (for example, Motor Carrier of Property) is active. A carrier whose authority is not active is not legally authorized to haul freight under that authority.</p></details>
+    <details><summary>Why does the insurance history only show cancelled or replaced filings?</summary><p>Because that is what FMCSA publishes as open data. The Insurance History dataset covers filings that were cancelled or replaced. The current active filing is public in FMCSA's Motus snapshot, under Insurance Details with "Include History" on — every result here links to it.</p></details>
+    <details><summary>How current is the data?</summary><p>The lookup fetches FMCSA records live and shows the record's as-of date. FMCSA data itself updates on the agency's schedule, so a very recent change — a filing made today, for example — may not appear yet.</p></details>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <b style="color:#fff">Fifty Bridges Insurance Services, Inc.</b><br>
+        4695 MacArthur Ct, Suite 1100<br>Newport Beach, CA 92660<br>
+        <a href="tel:+19496857772">(949) 685-7772</a> • <a href="mailto:quotes@50bridges.com">quotes@50bridges.com</a>
+      </div>
+      <div>
+        <b style="color:#fff">On this site</b><br>
+        <a href="/">Carrier Lookup Home</a><br>
+        <a href="/privacy-policy/">Privacy Policy</a>
+      </div>
+      <div>
+        <b style="color:#fff">Main website</b><br>
+        <a href="https://www.50bridges.com/">50bridges.com</a><br>
+        <a href="https://www.50bridges.com/request-a-quote/">Request a Quote</a>
+      </div>
+    </div>
+    <p class="small" style="margin-top:26px">Not an official FMCSA website. Carrier data is public FMCSA data, shown as of the date in each record. Fifty Bridges Insurance Services, Inc. is licensed as an insurance agency in AZ, CA, CO, GA, IL, IN, NC, NJ, NV, OH, OR, PA, SC, TX, UT, VA, and WA.</p>
+  </div>
+</footer>
+<script src="/assets/lookup.js"></script>
+</body>
+</html>

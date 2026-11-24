@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://fifty-bridges-insurance-services.vercel.app/sitemap.xml
+
+Sitemap: https://50bridgesinsuranceservices.com/sitemap.xml
